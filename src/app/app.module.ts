@@ -7,6 +7,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ServicesComponent } from './services/services.component';
 import { NewsComponent } from './news/news.component';
+import { AboutComponent } from './about/about.component';
+import { CartComponent } from './cart/cart.component';
+import { GetStartedComponent } from './get-started/get-started.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { NewsComponent } from './news/news.component';
     NavbarComponent,
     HomeComponent,
     ServicesComponent,
-    NewsComponent
+    NewsComponent,
+    AboutComponent,
+    CartComponent,
+    GetStartedComponent
   ],
   imports: [
     BrowserModule,
