@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -10,6 +13,11 @@ import { NewsComponent } from './news/news.component';
 import { AboutComponent } from './about/about.component';
 import { CartComponent } from './cart/cart.component';
 import { GetStartedComponent } from './get-started/get-started.component';
+import { NewsListComponent } from './news/news-list/news-list.component';
+import { NewsDetailsComponent } from './news/news-list/news-details/news-details.component';
+import { ShowOneNewsComponent } from './news/news-list/show-one-news/show-one-news.component';
+
+
 
 @NgModule({
   declarations: [
@@ -20,11 +28,16 @@ import { GetStartedComponent } from './get-started/get-started.component';
     NewsComponent,
     AboutComponent,
     CartComponent,
-    GetStartedComponent
+    GetStartedComponent,
+    NewsListComponent,
+    NewsDetailsComponent,
+    ShowOneNewsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

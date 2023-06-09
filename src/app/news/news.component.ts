@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./news.component.css']
 })
 export class NewsComponent {
-
+  constructor() { }
 }

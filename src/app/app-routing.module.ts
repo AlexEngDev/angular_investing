@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { ROUTES, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { NewsComponent } from './news/news.component';
 import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
 import { CartComponent } from './cart/cart.component';
 import { GetStartedComponent } from './get-started/get-started.component';
+import { NewsDetailsComponent } from './news/news-list/news-details/news-details.component';
+import { NewsListComponent } from './news/news-list/news-list.component';
+import { ShowOneNewsComponent } from './news/news-list/show-one-news/show-one-news.component';
 
 const routes: Routes = [
   {
-  path: "",
+  path: "home",
   component: HomeComponent,
   },
   {
@@ -19,6 +22,10 @@ const routes: Routes = [
   {
     path: "news",
     component: NewsComponent,
+  },
+  {
+    path: "news/:id",
+    component: ShowOneNewsComponent
   },
   {
     path: "services",
@@ -31,12 +38,14 @@ const routes: Routes = [
   {
     path: "start",
     component: GetStartedComponent,
-  }
-
+  },
+  {
+     path: '',   redirectTo: '/home', pathMatch: 'full'
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
