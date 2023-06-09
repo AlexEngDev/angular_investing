@@ -25,7 +25,8 @@
       <span class="cart-header__text">Cart</span>
       <span class="cart-header__quantity">0</span>
     </a>
-    <a routerLink="/start" class="header__button button">Get started</a>
+    <a *ngIf="!checkUserStatus" routerLink="/start" class="header__button button">Get started</a>
+    <a *ngIf="checkUserStatus" routerLink="/start" class="header__button button">Logout</a>
     <button class="icon-menu" type="button">
       <span></span>
     </button>

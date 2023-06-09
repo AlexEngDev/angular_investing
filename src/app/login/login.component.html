@@ -1,0 +1,40 @@
+<div class="login button">
+  <div class="text-center">
+    <a
+      *ngIf="!statusChanged"
+      class="item-blog__link"
+      role="button"
+      (click)="onLogin()"
+      >Login</a
+    >
+    <br />
+    <a
+      *ngIf="statusChanged"
+      class="item-blog__link"
+      role="button"
+      (click)="onLogout()"
+      >Logout</a
+    >
+  </div>
+
+  <div class="mb-3" *ngIf="!statusChanged">
+    <label for="" class="form-label">Username</label>
+    <input [(ngModel)]="userUsername" type="text" class="form-control" />
+  </div>
+
+  <div class="mb-3" *ngIf="!statusChanged">
+    <label for="" class="form-label">Password</label>
+    <input [(ngModel)]="userPassword" type="text" class="form-control" />
+  </div>
+
+  <div>
+    <div *ngIf="user; else noLogged">
+      Benvenuto, sei loggato come:
+      <h2>{{ user }}</h2>
+    </div>
+    <ng-template #noLogged>
+      <h2>Gentile Utente, non sei loggato.</h2>
+    </ng-template>
+    <h2 *ngIf="!checkPassword">Password errato</h2>
+  </div>
+</div>

@@ -16,6 +16,8 @@ import { GetStartedComponent } from './get-started/get-started.component';
 import { NewsListComponent } from './news/news-list/news-list.component';
 import { NewsDetailsComponent } from './news/news-list/news-details/news-details.component';
 import { ShowOneNewsComponent } from './news/news-list/show-one-news/show-one-news.component';
+import { LoginComponent } from './login/login.component';
+import { NoAuthorizatedComponent } from './no-authorizated/no-authorizated.component';
 
 
 
@@ -31,7 +33,9 @@ import { ShowOneNewsComponent } from './news/news-list/show-one-news/show-one-ne
     GetStartedComponent,
     NewsListComponent,
     NewsDetailsComponent,
-    ShowOneNewsComponent
+    ShowOneNewsComponent,
+    LoginComponent,
+    NoAuthorizatedComponent
   ],
   imports: [
     BrowserModule,

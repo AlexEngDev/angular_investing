@@ -9,6 +9,8 @@ import { GetStartedComponent } from './get-started/get-started.component';
 import { NewsDetailsComponent } from './news/news-list/news-details/news-details.component';
 import { NewsListComponent } from './news/news-list/news-list.component';
 import { ShowOneNewsComponent } from './news/news-list/show-one-news/show-one-news.component';
+import { authGuard } from './auth.guard';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -37,7 +39,11 @@ const routes: Routes = [
   },
   {
     path: "start",
-    component: GetStartedComponent,
+    component: GetStartedComponent, canActivate: [authGuard]
+  },
+  {
+    path: "login",
+    component: LoginComponent,
   },
   {
      path: '',   redirectTo: '/home', pathMatch: 'full'
