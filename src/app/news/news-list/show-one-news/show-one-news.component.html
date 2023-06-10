@@ -1,5 +1,4 @@
-<p>show-one-news works!</p>
-<div *ngIf="image">
-  <h1>{{ image.photographer }}</h1>
+<div *ngIf="image" class="start__container start__body big__image">
   <img [src]="image.src.large" alt="image.alt" />
+  <h2 class="author">Author: {{ image.photographer }}</h2>
 </div>

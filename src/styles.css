@@ -1435,3 +1435,13 @@ margin: 10rem auto;
 .image__card-title{
   color: #85470d;
 }
+.big__image{
+  display: flex;
+  flex-direction: column;
+  margin-top: 9rem;
+  justify-content: center;
+}
+.big__image img{
+  max-width: 100%;
+  padding-bottom: 1rem;
+}
