@@ -1394,3 +1394,6 @@ margin: 10rem auto;
 .login__button{
   background-color: rgb(4, 57, 50);
 }
+.login_page{
+ margin-top: 20%;
+}

@@ -1,71 +1,48 @@
-<div class="login button">
-  <div class="text-center">
-    <a
-      *ngIf="!statusChanged"
-      class="item-blog__link"
-      role="button"
-      (click)="onLogin()"
-      >Login</a
-    >
-    <br />
-    <a
-      *ngIf="statusChanged"
-      class="item-blog__link"
-      role="button"
-      (click)="onLogout()"
-      >Logout</a
-    >
+<div class="start__container login_page">
+  <div *ngIf="user; else noLogged" class="start__body input__block">
+    Benvenuto, sei loggato come:
+    <h2>{{ user }}</h2>
   </div>
-
-  <div class="mb-3" *ngIf="!statusChanged">
-    <label for="" class="form-label">Username</label>
-    <input [(ngModel)]="userUsername" type="text" class="form-control" />
-  </div>
-
-  <div class="mb-3" *ngIf="!statusChanged">
-    <label for="" class="form-label">Password</label>
-    <input [(ngModel)]="userPassword" type="text" class="form-control" />
-  </div>
-
-  <div>
-    <div *ngIf="user; else noLogged">
-      Benvenuto, sei loggato come:
-      <h2>{{ user }}</h2>
-    </div>
-    <ng-template #noLogged>
-      <h2>Gentile Utente, non sei loggato.</h2>
-    </ng-template>
-    <h2 *ngIf="!checkPassword">Password errato</h2>
-  </div>
-</div>
-
-<div class="start__container ">
-  <div class="start__body input__block">
-    <div class="start__column">
-      <h2 class="start__title">
-        Dear user, You are not authorized to access this page.
-      </h2>
-      <div class="start__text text">
-        <p>Enter username and password to use "Get Started"</p>
+  <ng-template #noLogged>
+    <div class="start__body input__block">
+      <div *ngIf="!statusChanged" class="start__column">
+        <h2 class="start__title">
+          Dear user, You are not authorized to access this page.
+        </h2>
+        <div class="start__text text">
+          <p>Enter username and password to use "Get Started"</p>
+        </div>
+      </div>
+      <div class="start__column">
+        <div class="start__actions input__block">
+          <input
+            [(ngModel)]="userUsername"
+            type="text"
+            placeholder="Enter your username"
+            required
+            class="subscribe__input input__login"
+          />
+          <input
+            [(ngModel)]="userPassword"
+            type="text"
+            placeholder="Enter your password"
+            required
+            class="subscribe__input input__login"
+          />
+          <a
+            *ngIf="!statusChanged"
+            (click)="onLogin()"
+            class="login__button button"
+            >Log-in</a
+          >
+          <a
+            *ngIf="statusChanged"
+            (click)="onLogout()"
+            class="login__button button"
+            >Log-Out</a
+          >
+        </div>
       </div>
     </div>
-    <div class="start__column ">
-      <div class="start__actions input__block">
-
-        <input
-          type="text"
-          placeholder="Enter your username"
-          required
-          class="subscribe__input input__login"
-        />
-        <input
-          type="text"
-          placeholder="Enter your password"
-          required
-          class="subscribe__input input__login"
-        />
-        <a href="" class="login__button button">Log in</a>
-      </div>
-    </div>
-  </div>
+  </ng-template>
 </div>
