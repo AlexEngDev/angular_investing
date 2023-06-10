@@ -1,28 +1,27 @@
-<div class="serch-coffee container">
-  <div class="input-group input-group-lg mb-3">
+<div class="search__container">
+  <div class="input-search">
     <input
       type="text"
-      class="form-control"
+      class="subscribe__input input__login"
       placeholder=""
       aria-label="Example text with button addon"
       aria-describedby="button-addon1"
       [(ngModel)]="searchQuery"
     />
-    <button
-      class="btn btn-outline-secondary"
+    <a
+      class="search__button button"
       type="button"
-      id="button-addon1"
+
       (click)="cercaImages()"
     >
-      Cerca
-    </button>
+      Search
+    </a>
   </div>
 </div>
 
-<div class="image container" *ngIf="imagesData">
+<div class="images__container" *ngIf="imagesData">
   <app-news-details
     *ngFor="let one_image of imagesData.photos"
     [ImageParent]="one_image"
   ></app-news-details>
 </div>
-

@@ -1,17 +1,15 @@
-<div *ngIf="ImageParent" class="gallery">
-  <div class="gallery_images">
-    <img
-      [src]="ImageParent.src.small"
-      class="card-img-top"
-      alt="ImageParent.alt"
-    />
+<div *ngIf="ImageParent" class="one_image">
+  <img
+    [src]="ImageParent.src.medium"
+    class="card-img-top"
+    alt="ImageParent.alt"
+  />
 
-    <div class="card-body">
-      <h5 class="card-title">{{ ImageParent.photographer }}</h5>
+  <div class="one_image__card-body">
+    <h5 class="image__card-title">{{ ImageParent.photographer }}</h5>
 
-      <a routerLink="/news/{{ ImageParent.id }}" class="btn btn-primary"
-        >Details</a
-      >
-    </div>
+    <a routerLink="/news/{{ ImageParent.id }}" class="button details__button"
+      >Details</a
+    >
   </div>
 </div>

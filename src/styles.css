@@ -1397,3 +1397,41 @@ margin: 10rem auto;
 .login_page{
  margin-top: 20%;
 }
+
+.input-search{
+  display: flex;
+  padding: 0 2rem;
+  gap: 10px;
+}
+.search__button{
+  display: inline-block;
+  background-color: rgb(57, 4, 54);
+  align-self: center;
+}
+
+.images__container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.one_image{
+  position: relative;
+}
+
+.one_image__card-body{
+  position: absolute;
+  top: 0;
+}
+
+
+.details__button{
+  background-color: rgba(21, 20, 20, 0.5);
+  text-align: center;
+  padding: 0.5rem;
+  color: #dfb4a2;
+  border-radius: 1rem;
+}
+.image__card-title{
+  color: #85470d;
+}
