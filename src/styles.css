@@ -1376,9 +1376,21 @@ body {
 
 /***************************************************NEWS-component********************************************************/
 .news{
-margin: 10rem;
-}
-.login{
-  margin: 10rem;
+margin: 10rem auto;
 }
 
+.login{
+  margin-top: 10rem;
+}
+.input__block{
+  display: block;
+}
+.input__login{
+  display: block;
+  color: rgb(236, 126, 30);
+  margin: 2rem auto;
+  width: 75%;
+}
+.login__button{
+  background-color: rgb(4, 57, 50);
+}
