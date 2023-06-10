@@ -1,5 +1,6 @@
 import { Component, DoCheck } from '@angular/core';
 import { AuthorizationService } from '../shared/authorization.service';
+import { UsersService } from '../shared/users.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +9,7 @@ import { AuthorizationService } from '../shared/authorization.service';
 })
 export class NavbarComponent implements DoCheck{
 
-  constructor(private authServ: AuthorizationService){
+  constructor(private authServ: AuthorizationService, private userServ: UsersService){
   }
 
   ngDoCheck(): void {
@@ -18,5 +19,11 @@ export class NavbarComponent implements DoCheck{
   }
 
   checkUserStatus:boolean
+
+  onLogout(){
+    this.userServ.logout();
+    window.location.reload();
+  }
+
 
 }

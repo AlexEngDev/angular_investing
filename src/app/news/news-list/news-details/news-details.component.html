@@ -1,11 +1,11 @@
-<div *ngIf="ImageParent">
-  <div class="card text-white bg-dark mb-3" style="width: 15rem; height: 35rem">
+<div *ngIf="ImageParent" class="gallery">
+  <div class="gallery_images">
     <img
       [src]="ImageParent.src.small"
       class="card-img-top"
-      alt="coffeParent.alt"
-      style="width: 15rem"
+      alt="ImageParent.alt"
     />
+
     <div class="card-body">
       <h5 class="card-title">{{ ImageParent.photographer }}</h5>
 
@@ -15,5 +15,3 @@
     </div>
   </div>
 </div>
-
-<!-- <a routerLink="/news/{{ ImageParent.id }}/" class="btn btn-primary">Details</a>-->
